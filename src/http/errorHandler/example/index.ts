@@ -21,7 +21,7 @@ const handleError = (res: Response, error: CustomError): boolean => {
 
 export const errorHandler = (req: Request, res: Response, error: CustomError): boolean => {
   const url = req.path ?? ''
-  const needToRun = !!url.includes('/assets')
+  const needToRun = !!url.includes('/example')
   if (needToRun) {
     return handleError(res, error)
   }
